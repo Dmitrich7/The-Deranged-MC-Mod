@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "layer0": "minecraft:stone",
+    "all": "the_deranged_mc:block/condensed_dirt"
+  }
+}
