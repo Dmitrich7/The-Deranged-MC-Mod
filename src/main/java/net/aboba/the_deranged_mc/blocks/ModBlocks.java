@@ -1,6 +1,6 @@
-package com.example.block;
+package net.aboba.the_deranged_mc.blocks;
 
-import com.example.TheDerangedMC;
+import net.aboba.the_deranged_mc.TheDerangedMC;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -21,7 +21,7 @@ public class ModBlocks {
 
     public static Block register(Block block, String name, boolean shouldRegisterItem) {
         // Register the block and its item.
-        Identifier id = new Identifier(TheDerangedMC.MODID, name);
+        Identifier id = new Identifier(TheDerangedMC.MOD_ID, name);
 
         // Sometimes, you may not want to register an item for the block.
         // Eg: if it's a technical block like `minecraft:air` or `minecraft:end_gateway`
@@ -34,7 +34,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        TheDerangedMC.LOGGER.info("Registering Mod Blocks for " + TheDerangedMC.MODID);
+        TheDerangedMC.LOGGER.info("Registering Mod Blocks for " + TheDerangedMC.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((itemGroup) -> {
             itemGroup.add(ModBlocks.CONDENSED_DIRT.asItem());

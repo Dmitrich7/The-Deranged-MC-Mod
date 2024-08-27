@@ -1,34 +1,32 @@
 {
 	"schemaVersion": 1,
 	"id": "the_deranged_mc",
-	"version": "0.0.1",
+	"version": "${version}",
 	"name": "The-Deranged-MC",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Spiritology mod yeah",
 	"authors": [
 		"Darling_Yoko",
 		"dmitrich"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Dmitrich7/The-Deranged-MC-Mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.TheDerangedMC"
+			"net.aboba.the_deranged_mc.TheDerangedMC"
 		],
 		"client": [
-			"com.example.TheDerangedMCClient"
+			"net.aboba.the_deranged_mc.TheDerangedMCClient"
+		],
+		"fabric-datagen": [
+			"net.aboba.the_deranged_mc.TheDerangedMCDataGenerator"
 		]
 	},
 	"mixins": [
-		"the_deranged_mc.mixins.json",
-		{
-			"config": "the_deranged_mc.client.mixins.json",
-			"environment": "client"
-		}
+		"the_deranged_mc.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.0",

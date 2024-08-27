@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.example.mixin",
+	"package": "net.aboba.the_deranged_mc.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"TheDerangedMCMixin"
+      "TheDerangedMCMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

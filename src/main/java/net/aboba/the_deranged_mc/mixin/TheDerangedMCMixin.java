@@ -1,4 +1,4 @@
-package com.example.mixin;
+package net.aboba.the_deranged_mc.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package com.example;
+package net.aboba.the_deranged_mc;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.PersistentState;

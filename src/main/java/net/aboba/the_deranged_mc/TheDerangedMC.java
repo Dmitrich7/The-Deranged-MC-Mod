@@ -1,11 +1,14 @@
-package com.example;
+package net.aboba.the_deranged_mc;
 
-import com.example.item.ModItems;
-import com.example.block.ModBlocks;
+import net.aboba.the_deranged_mc.items.ModItems;
+import net.aboba.the_deranged_mc.blocks.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
@@ -15,11 +18,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class TheDerangedMC implements ModInitializer {
-	public static final String MODID = "the_deranged_mc";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
-	public static final Identifier PLAYER_ORE_BREAK_STATE_ID = new Identifier(MODID, "player_ore_break_state");
-
-
+	public static final String MOD_ID = "the_deranged_mc";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Identifier PLAYER_ORE_BREAK_STATE_ID = new Identifier(MOD_ID, "player_ore_break_state");
 
 	@Override
 	public void onInitialize() {
@@ -38,7 +39,7 @@ public class TheDerangedMC implements ModInitializer {
 
 				// Load or create the PlayerOreBreakState
 				PlayerOreBreakState oreBreakState = stateManager.getOrCreate(
-                        PlayerOreBreakState::fromNbt,
+						PlayerOreBreakState::fromNbt,
 						PlayerOreBreakState::new,
 						PLAYER_ORE_BREAK_STATE_ID.toString()
 				);

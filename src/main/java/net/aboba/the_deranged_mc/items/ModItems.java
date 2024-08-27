@@ -1,6 +1,6 @@
-package com.example.item;
+package net.aboba.the_deranged_mc.items;
 
-import com.example.TheDerangedMC;
+import net.aboba.the_deranged_mc.TheDerangedMC;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -11,30 +11,19 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-//    public static final Item TEST_ITEM = registerItem("test_item", new Item(new FabricItemSettings()));
-
     public static final Item TEST_ITEM = register(
-            // Ignore the food component for now, we'll cover it later in the food section.
             new Item(new FabricItemSettings()),
             "test_item"
     );
 
     public static Item register(Item item, String id) {
-        // Create the identifier for the item.
-        Identifier itemID = new Identifier(TheDerangedMC.MODID, id);
-
-        // Register the item.
+        Identifier itemID = new Identifier(TheDerangedMC.MOD_ID, id);
         Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
-
-        // Return the registered item!
         return registeredItem;
     }
 
     public static void registerModItems() {
-        TheDerangedMC.LOGGER.info("Registering Mod Items for " + TheDerangedMC.MODID);
-
-        // Get the event for modifying entries in the ingredients group.
-// And register an event handler that adds our suspicious item to the ingredients group.
+        TheDerangedMC.LOGGER.info("Registering Mod Items for " + TheDerangedMC.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
                 .register((itemGroup) -> itemGroup.add(ModItems.TEST_ITEM));
     }
