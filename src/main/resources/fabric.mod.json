@@ -1,11 +1,12 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example mod",
+	"id": "the_deranged_mc",
+	"version": "0.0.1",
+	"name": "The-Deranged-MC",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Darling_Yoko",
+		"dmitrich"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -16,23 +17,23 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.example.TheDerangedMC"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.example.TheDerangedMCClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"the_deranged_mc.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "the_deranged_mc.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.10",
-		"minecraft": "~1.20.6",
-		"java": ">=21",
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {
