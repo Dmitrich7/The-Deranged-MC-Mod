@@ -1,4 +1,4 @@
-package net.aboba.the_deranged_mc;
+package net.aboba.the_deranged_mc.states;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.PersistentState;
@@ -8,8 +8,8 @@ public class PlayerOreBreakState extends PersistentState {
     private static final String DIAMOND_ORE_BROKEN_KEY = "diamondOreBroken";
     private final NbtCompound playerData = new NbtCompound();
 
-    public boolean hasBrokenDiamondOre(String playerUuid) {
-        return playerData.getBoolean(playerUuid);
+    public boolean hasNotBrokenDiamondOre(String playerUuid) {
+        return !playerData.getBoolean(playerUuid);
     }
 
     public void setBrokenDiamondOre(String playerUuid) {
